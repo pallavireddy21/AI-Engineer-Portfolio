@@ -3,7 +3,7 @@ import chromadb
 import ollama
 
 # ── 1. Load embedding model + ChromaDB (same ones used in ingest.py) ──────────
-def load_resources():
+def load_resources(collection_name="documents"):
     model = SentenceTransformer("all-MiniLM-L6-v2")
     client = chromadb.PersistentClient(path="chroma_db")
     collection = client.get_collection(name="attention_paper")

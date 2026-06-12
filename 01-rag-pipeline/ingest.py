@@ -26,7 +26,7 @@ def chunk_text(text, chunk_size=500, overlap=50):
     return chunks
 
 # ── 3. Embed chunks and store in ChromaDB ─────────────────────────────────────
-def ingest(pdf_path):
+def ingest(pdf_path, collection_name="documents"):
     print("📄 Loading PDF...")
     text = load_pdf(pdf_path)
     print(f"✅ Extracted {len(text)} characters")
